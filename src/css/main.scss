@@ -17,3 +17,14 @@ body {
   background: $body;
   position: relative;
 }
+
+.block{
+  position: absolute;
+  top: 50%;
+  left:0;
+  transform: translateY(-50%);
+  background: $block;
+  width: 0vw;
+  height: 0vw;
+  transition: all 0.5s linear;
+}
