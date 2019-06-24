@@ -27,6 +27,22 @@ class Block {
             this.block.style.background = this.getRandomBackground();
         }
     }
+
+    animateBlock() {
+        setInterval(() => {
+            if (this.moveToLeft) {
+                this.position++;
+                this.renderBlock();
+                if (this.position === 91)
+                    this.moveToLeft = false;
+            } else {
+                this.position--;
+                this.renderBlock();
+                if (this.position === 0)
+                    this.moveToLeft = true;
+            }
+        }, 200);
+    }
 }
 
 export default Block;
